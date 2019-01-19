@@ -1,7 +1,7 @@
 import React from 'react'
 
-const BasicButton = (props) => (
-  <a href={props.link} className="basic-button">{props.text}</a>
+const BasicButton = ({ link, text }) => (
+  <a href={link} className="basic-button">{text}</a>
 )
 
 export default BasicButton
