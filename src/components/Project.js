@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Project = ({ title, slug }) => (
-  <a href={slug} className="project">
+  <Link to={slug} className="project">
     <p>{title}</p>
-  </a>
+  </Link>
 )
 
 export default Project

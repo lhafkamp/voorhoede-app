@@ -1,11 +1,12 @@
 import React from 'react'
-import HomePage from './HomePage'
+
+import PageRoutes from './PageRoutes'
 import Nav from './Nav'
 
 const Layout = () => (
   <div id="layout">
     <Nav />
-    <HomePage />
+    <PageRoutes />
   </div>
 )
 
