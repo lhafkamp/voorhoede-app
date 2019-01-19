@@ -2,11 +2,11 @@ import React from 'react'
 import HomePage from './HomePage'
 import Nav from './Nav'
 
-const Page = () => (
-  <div id="page">
+const Layout = () => (
+  <div id="layout">
     <Nav />
     <HomePage />
   </div>
 )
 
-export default Page
+export default Layout
