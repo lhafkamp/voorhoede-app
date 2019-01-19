@@ -1,6 +1,7 @@
 import React from 'react'
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
+import { BrowserRouter } from 'react-router-dom'
 
 import Layout from './components/Layout'
 import './styles/all.scss'
@@ -10,7 +11,9 @@ const client = new ApolloClient({ uri })
 
 const App = () => (
   <ApolloProvider client={client}>
-    <Layout />
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
   </ApolloProvider>
 )
 
