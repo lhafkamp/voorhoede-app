@@ -1,10 +1,9 @@
 #projects {
-  background: #fff;
-  padding-top: 3rem;
-  width: 100vw;
+  padding: 3rem 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
 
   .project {
     margin: 1rem;

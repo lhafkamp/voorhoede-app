@@ -1,0 +1,18 @@
+.yellow-bg {
+  background: $vh-yellow;
+  height: 100%;
+  width: 50vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -9999;
+}
+
+.white-bg {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: -9999;
+  width: 100vw;
+  background: #fff;
+}
