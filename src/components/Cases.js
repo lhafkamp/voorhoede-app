@@ -30,7 +30,7 @@ const Cases = () => (
         })
       }}
     </Query>
-    <div class="white-bg"></div>
+    <div className="white-bg"></div>
   </div>
 )
 

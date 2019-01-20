@@ -27,4 +27,41 @@
       }
     }  
   }
+
+  @media(max-width: 1000px) {
+    article {
+      flex-direction: column;
+
+      h1 {
+        font-size: 3rem;
+        width: auto;
+      }
+
+      > div {
+        img {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 550px) {
+    img {
+      align-self: flex-start;
+    }
+
+    .options {
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        text-align: center;
+
+        &:not(:first-of-type) {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
 }
