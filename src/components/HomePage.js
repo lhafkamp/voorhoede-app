@@ -3,6 +3,7 @@ import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 
 import Project from './Project'
+import usedTech from '../usedTech'
 
 const HomePage = () => (
   <div id="projects">
@@ -12,6 +13,7 @@ const HomePage = () => (
           projects(language: en) {
             title
             slug
+            body
           }
         }
       `}
@@ -20,9 +22,12 @@ const HomePage = () => (
         if (loading) return <p>Loading...</p>
         if (error) return <p>Error</p>
 
-        return data.projects.map(({ title, slug }) => (
-          <Project key={title} title={title} slug={slug} />
-        ))
+        return data.projects.map(({ title, slug, body }) => {
+          const tags = []
+          usedTech().forEach(tech => body.includes(tech) ? tags.push(tech) : null)
+
+          return <Project key={title} title={title} slug={slug} tags={tags} />
+        })
       }}
     </Query>
   </div>
