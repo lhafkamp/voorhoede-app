@@ -5,7 +5,7 @@ import gql from 'graphql-tag'
 import Project from './Project'
 import usedTech from '../usedTech'
 
-const HomePage = () => (
+const Cases = () => (
   <div id="projects">
     <Query
       query={gql`
@@ -33,4 +33,4 @@ const HomePage = () => (
   </div>
 )
 
-export default HomePage
+export default Cases

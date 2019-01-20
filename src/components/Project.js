@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Project = ({ title, slug, tags }) => (
-  <Link to={slug} className="project">
+  <Link to={`cases/${slug}`} className="project">
     <p>{title}</p>
     <div>
       <ul>
