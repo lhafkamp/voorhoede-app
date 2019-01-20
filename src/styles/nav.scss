@@ -1,4 +1,6 @@
 #nav {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   padding: .9rem;
 
@@ -6,8 +8,31 @@
     width: 12.5rem;
   }
 
+  ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      &:not(:first-child) {
+        margin-left: 2rem;
+      }
+
+      a {
+        font-size: .9rem;
+        color: $vh-blue;
+        text-decoration: none;
+      }
+
+      .active {
+        padding-bottom: .1rem;
+        border-bottom: 2px solid $vh-blue;
+      }
+    }
+  }
+
   hr {
-    margin-top: .9rem;
+    margin-top: 3rem;
     opacity: .05;
     border: .5px solid $vh-black;
     width: 100%;

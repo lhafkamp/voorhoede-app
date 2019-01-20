@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 import logoWithText from '../images/logo-with-text.svg'
 
@@ -8,6 +8,9 @@ const Nav = () => (
     <Link to="/">
       <img src={logoWithText} alt="Voorhoede logo" />
     </Link>
+    <ul>
+      <li><NavLink to="/cases">Cases</NavLink></li>
+    </ul>
     <hr />
   </nav>
 )
