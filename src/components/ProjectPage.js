@@ -2,6 +2,8 @@ import React from 'react'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 
+import NotFoundPage from './NotFoundPage'
+
 const ProjectPage = ({ match }) => (
   <Query
     query={gql`
@@ -16,7 +18,7 @@ const ProjectPage = ({ match }) => (
   >
     {({ loading, error, data }) => {
       if (loading) return <p>Loading...</p>
-      if (error) return <p>Error</p>
+      if (error) return <NotFoundPage />
 
       const { title, subtitle, excerpt } = data.project
 
