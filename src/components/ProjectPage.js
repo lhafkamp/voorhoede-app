@@ -10,8 +10,7 @@ const ProjectPage = ({ match }) => (
       {
         project(language: en, slug: "${match.params.projectPage}") {
           title
-          subtitle
-          excerpt
+          body
         }
       }
     `}
@@ -20,12 +19,11 @@ const ProjectPage = ({ match }) => (
       if (loading) return <p>Loading...</p>
       if (error) return <NotFoundPage />
 
-      const { title, subtitle, excerpt } = data.project
+      const { title, body } = data.project
 
       return <div>
         <h1>{title}</h1>
-        <h3>{subtitle}</h3>
-        <p>{excerpt}</p>
+        <div dangerouslySetInnerHTML={{ __html: body }}></div>
       </div>
     }}
     
