@@ -1,5 +1,6 @@
 .basic-button {
-  color: #fff;
+  display: block;
+  color: $vh-yellow-light;
   font-size: 1.2rem;
   background: $vh-blue;
   text-decoration: none;
@@ -10,5 +11,10 @@
   &:hover,
   &:focus {
     transform: scale(1.03);
+  }
+
+  &:active {
+    transform: scale(.9);
+    background: darkblue;
   }
 }

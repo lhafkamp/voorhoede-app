@@ -35,7 +35,7 @@
     margin-top: 3rem;
     opacity: .05;
     border: .5px solid $vh-black;
-    width: 100%;
+    width: calc(100% - 1px);
     position: absolute;
     left: 0;
   }

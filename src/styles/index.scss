@@ -6,6 +6,8 @@ body {
   background: $vh-yellow-light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 h1,
