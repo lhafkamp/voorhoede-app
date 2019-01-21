@@ -5,7 +5,7 @@ import gql from 'graphql-tag'
 import Project from './Project'
 import usedTech from '../usedTech'
 
-const Cases = () => (
+const Cases = ({ tagsToShow }) => (
   <div id="projects">
     <Query
       query={gql`
@@ -26,7 +26,12 @@ const Cases = () => (
           const tags = []
           usedTech().forEach(tech => body.includes(tech) ? tags.push(tech) : null)
 
-          return <Project key={title} title={title} slug={slug} tags={tags} />
+          if (!tagsToShow.length) {
+            return <Project key={title} title={title} slug={slug} tags={tags} /> 
+          } else {
+            const includesTag = tagsToShow.filter(tag => tags.includes(tag))
+            return includesTag.length > 0 ? <Project key={title} title={title} slug={slug} tags={tags} /> : null
+          }
         })
       }}
     </Query>

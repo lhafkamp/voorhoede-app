@@ -1,9 +1,7 @@
 function usedTech() {
   const techArray = [
     'React', 
-    'React Native', 
-    'Vue',
-    'Vuex',
+    'React Native',
     'AngularJS',
     'PWA',
     'Cordova',
