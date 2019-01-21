@@ -1,6 +1,6 @@
 import React from 'react'
 
-import BasicButton from './BasicButton'
+import BasicButton from '../BasicButton'
 
 const IntroPage = () => (
   <section id="intro-page">

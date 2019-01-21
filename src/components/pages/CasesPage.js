@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import Cases from './Cases'
-import TagButtons from './TagButtons'
+import Cases from '../Cases'
+import TagButtons from '../TagButtons'
 
 class CasesPage extends Component {
   constructor() {
