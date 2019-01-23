@@ -2,6 +2,7 @@ import React from 'react'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 
+import ShowJobs from '../ShowJobs'
 import NotFoundPage from './NotFoundPage'
 
 const ProjectPage = ({ match }) => (
@@ -12,6 +13,10 @@ const ProjectPage = ({ match }) => (
           title
           body
         }
+        jobs(language: en) {
+          title
+          url
+        }
       }
     `}
   >
@@ -20,10 +25,12 @@ const ProjectPage = ({ match }) => (
       if (error) return <NotFoundPage />
 
       const { title, body } = data.project
+      const { jobs } = data
 
       return <div>
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: body }}></div>
+        <ShowJobs jobs={jobs} />
       </div>
     }}
     
