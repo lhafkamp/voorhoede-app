@@ -4,6 +4,7 @@ import gql from 'graphql-tag'
 
 import Project from './Project'
 import usedTech from '../usedTech'
+import Loading from './Loading'
 
 const Cases = ({ tagsToShow }) => (
   <div id="projects">
@@ -19,7 +20,7 @@ const Cases = ({ tagsToShow }) => (
       `}
     >
       {({ loading, error, data }) => {
-        if (true) return <p>Loading...</p>
+        if (loading) return <Loading />
         if (error) return <p>Error</p>
 
         return data.projects.map(({ title, slug, body }) => {

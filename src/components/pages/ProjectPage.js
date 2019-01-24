@@ -3,6 +3,7 @@ import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 
 import ShowJobs from '../ShowJobs'
+import Loading from '../Loading'
 import NotFoundPage from './NotFoundPage'
 
 const ProjectPage = ({ match }) => (
@@ -21,7 +22,7 @@ const ProjectPage = ({ match }) => (
     `}
   >
     {({ loading, error, data }) => {
-      if (loading) return <p>Loading...</p>
+      if (loading) return <Loading />
       if (error) return <NotFoundPage />
 
       const { title, body } = data.project
@@ -40,7 +41,6 @@ const ProjectPage = ({ match }) => (
         </div>
       )
     }}
-    
   </Query>
 )
 
