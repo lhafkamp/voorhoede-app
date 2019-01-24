@@ -35,7 +35,6 @@ const Cases = ({ tagsToShow }) => (
         })
       }}
     </Query>
-    <div className="white-bg"></div>
   </div>
 )
 

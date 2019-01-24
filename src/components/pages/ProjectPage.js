@@ -27,11 +27,18 @@ const ProjectPage = ({ match }) => (
       const { title, body } = data.project
       const { jobs } = data
 
-      return <div>
-        <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: body }}></div>
-        <ShowJobs jobs={jobs} />
-      </div>
+      return (
+        <div id="project-page">
+          <article>
+            <h1>{title}</h1>
+            <div class="yellow-bg"></div>
+          </article>
+          <div className="project-body">
+            <div dangerouslySetInnerHTML={{ __html: body }}></div>
+          </div>
+          <ShowJobs jobs={jobs} />
+        </div>
+      )
     }}
     
   </Query>

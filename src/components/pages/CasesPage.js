@@ -28,6 +28,7 @@ class CasesPage extends Component {
       <section id="cases-page">
         <article>
           <h1>Take a look at what we worked with</h1>
+          <div className="yellow-bg"></div>
         </article>
         <TagButtons onClick={this.clickHandler} />
         <Cases tagsToShow={this.state.selectedTags} />

@@ -12,11 +12,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      margin-right: 5rem;
-      margin-bottom: 5rem;
+      position: relative;
 
       img {
         margin-top: 20rem;
@@ -25,9 +21,11 @@
 
       .options {
         display: flex;
+        flex-wrap: wrap;
         margin-top: 4rem;
 
         a {
+          margin-bottom: 1rem;
           margin-right: 1rem;
         }
       }

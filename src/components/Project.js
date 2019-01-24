@@ -6,9 +6,7 @@ const Project = ({ title, slug, tags }) => (
     <p>{title}</p>
     <div>
       <ul>
-        {tags.map(tag => {
-          return <li key={tag}>{tag}</li>
-        })}
+        {tags.map(tag => <li key={tag}>{tag}</li>)}
       </ul>
     </div>
   </Link>
