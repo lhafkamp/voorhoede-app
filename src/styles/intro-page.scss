@@ -1,8 +1,12 @@
 #intro-page {
   align-self: flex-start;
+  width: 100%;
+  height: calc(100vh - 65px);
 
   article {
     display: flex;
+    justify-content: space-between;
+    height: 100%;
 
     h1 {
       max-width: 35rem;
@@ -12,10 +16,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: relative;
+      align-self: flex-end;
+      padding-bottom: 4rem;
 
       img {
-        margin-top: 20rem;
         width: 15rem;
       }
 
@@ -50,19 +54,25 @@
   }
 
   @media(max-width: 550px) {
-    img {
-      align-self: flex-start;
-    }
+    article {
+      padding-bottom: 2rem;
 
-    .options {
-      align-self: flex-start;
-      flex-direction: column;
+      > div {
+        align-self: center;
 
-      a {
-        text-align: center;
+        img {
+          align-self: center;
+        }
 
-        &:not(:first-of-type) {
-          margin-top: 1rem;
+        .options {
+          align-self: flex-start;
+          flex-direction: column;
+          text-align: center;
+          flex-wrap: nowrap;
+
+          a {
+            margin-right: 0;
+          }
         }
       }
     }

@@ -19,7 +19,7 @@ const Cases = ({ tagsToShow }) => (
       `}
     >
       {({ loading, error, data }) => {
-        if (loading) return <p>Loading...</p>
+        if (true) return <p>Loading...</p>
         if (error) return <p>Error</p>
 
         return data.projects.map(({ title, slug, body }) => {

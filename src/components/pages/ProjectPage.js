@@ -31,7 +31,7 @@ const ProjectPage = ({ match }) => (
         <div id="project-page">
           <article>
             <h1>{title}</h1>
-            <div class="yellow-bg"></div>
+            <div className="yellow-bg"></div>
           </article>
           <div className="project-body">
             <div dangerouslySetInnerHTML={{ __html: body }}></div>

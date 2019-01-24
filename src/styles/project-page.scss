@@ -5,6 +5,7 @@
   width: 100%;
 
   .project-body {
+    box-sizing: border-box;
     margin-top: 30rem;
     align-self: flex-start;
     position: absolute;
@@ -19,9 +20,40 @@
       padding: 6rem 0;
       max-width: 700px;
 
+      #content-figure,
+      img {
+        margin: 3rem 0 4rem;
+      }
+
+      img,
+      video {
+        max-width: 700px;
+      }
+
       h2 {
         font-size: 2.4rem;
         line-height: 3.1rem;
+      }
+    }
+  }
+
+  @media(max-width: 750px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    .project-body {
+      margin-top: 20rem;
+      padding: 0 1rem;
+
+      > div {
+        padding-top: 3rem;
+        max-width: 100%;
+
+        img,
+        video {
+          max-width: 100%;
+        }
       }
     }
   }
