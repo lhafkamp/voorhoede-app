@@ -1,10 +1,10 @@
-#project-page {
+#cases-zoom-page {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
   width: 100%;
 
-  .project-body {
+  .cases-body {
     box-sizing: border-box;
     margin-top: 30rem;
     align-self: flex-start;
@@ -42,7 +42,7 @@
       font-size: 3rem;
     }
 
-    .project-body {
+    .cases-body {
       margin-top: 20rem;
       padding: 0 1rem;
 

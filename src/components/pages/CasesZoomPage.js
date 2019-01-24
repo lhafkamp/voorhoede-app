@@ -6,7 +6,7 @@ import ShowJobs from '../ShowJobs'
 import Loading from '../Loading'
 import NotFoundPage from './NotFoundPage'
 
-const ProjectPage = ({ match }) => (
+const CasesZoomPage = ({ match }) => (
   <Query
     query={gql`
       {
@@ -29,12 +29,12 @@ const ProjectPage = ({ match }) => (
       const { jobs } = data
 
       return (
-        <div id="project-page">
+        <div id="cases-zoom-page">
           <article>
             <h1>{title}</h1>
             <div className="yellow-bg"></div>
           </article>
-          <div className="project-body">
+          <div className="cases-body">
             <div dangerouslySetInnerHTML={{ __html: body }}></div>
           </div>
           <ShowJobs jobs={jobs} />
@@ -44,4 +44,4 @@ const ProjectPage = ({ match }) => (
   </Query>
 )
 
-export default ProjectPage
+export default CasesZoomPage
